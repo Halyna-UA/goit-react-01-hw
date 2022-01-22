@@ -1,5 +1,6 @@
 import Profil from './components/Profil';
 import profil from './profil.json';
+//import { Container } from './components/App.styled';//
 //import './App';
 
 // function App() {
@@ -27,16 +28,17 @@ export default function App() {
   return (
     <div>
       <Profil
-        avatar={profil[0].avatar}
-        username={profil[0].username}
-        tag={profil[0].tag}
-        location={profil[0].location}
-        followers={profil[0].stats.followers}
-        followersQuantity={profil[0].stats.followers.quantity}
-        views={profil[0].stats.views}
-        viewsQuantity={profil[0].stats.likes.quantity}
-        likes={profil[0].stats.likes}
-        likesQuantity={profil[0].stats.likes.quantity}
+        avatar={profil.avatar}
+        username={profil.username}
+        tag={profil.tag}
+        location={profil.location}
+        stats={profil.stats}
+        //followers={profil.stats.followers}
+        //// followersQuantity={profil.stats.followers.quantity}
+        //views={profil.stats.views}
+        //// viewsQuantity={profil.stats.likes.quantity}
+        //likes={profil.stats.likes}
+        //// likesQuantity={profil.stats.likes.quantity}
       />
     </div>
   );

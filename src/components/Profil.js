@@ -1,29 +1,31 @@
 import PropTypes from 'prop-types';
+import { Container, Wrap, Avatar, Info, List, Item, SocialData } from './App.styled';
+
 function Profil(props) {
   return (
-    <div>
-      <div>
-        <img src={props.avatar} alt={props.username} />
-        <p>{props.username}Jacques Gluke</p>
-        <p>{props.tag}jgluke</p>
-        <p>{props.location}Ocho Rios, Jamaica</p>
-      </div>
+    <Container>
+      <Wrap>
+        <Avatar src={props.avatar} alt={props.username} />
+        <Info>{props.username}</Info>
+        <Info>{props.tag}</Info>
+        <Info>{props.location}</Info>
+      </Wrap>
 
-      <ul>
-        <li>
-          <span>{props.followers}Followers</span>
-          <span>{props.followersQuantity}1000</span>
-        </li>
-        <li>
-          <span>{props.views}Views</span>
-          <span>{props.viewsQuantity}2000</span>
-        </li>
-        <li>
-          <span>{props.likes}Likes</span>
-          <span>{props.likesQuantity}3000</span>
-        </li>
-      </ul>
-    </div>
+      <List>
+        <Item>
+          <SocialData>Followers</SocialData>
+          <SocialData>{props.followers}1000</SocialData>
+        </Item>
+        <Item>
+          <SocialData>Views</SocialData>
+          <SocialData>{props.views}2000</SocialData>
+        </Item>
+        <Item>
+          <SocialData>Likes</SocialData>
+          <SocialData>{props.likes}3000</SocialData>
+        </Item>
+      </List>
+    </Container>
   );
 }
 
@@ -34,11 +36,11 @@ Profil.propTypes = {
   location: PropTypes.string.isRequired,
   stats: PropTypes.shape({
     followers: PropTypes.number.isRequired,
-    followersQuantity: PropTypes.number.isRequired,
+    // followersQuantity: PropTypes.number.isRequired,
     views: PropTypes.number.isRequired,
-    viewsQuantity: PropTypes.number.isRequired,
+    // viewsQuantity: PropTypes.number.isRequired,
     likes: PropTypes.number.isRequired,
-    likesQuantity: PropTypes.number.isRequired,
+    // likesQuantity: PropTypes.number.isRequired,
   }),
 };
 
