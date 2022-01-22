@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-// import { Container } from '@testing-library/react';
 
 export const Container = styled.div`
   display: flex;

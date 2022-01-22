@@ -36,11 +36,10 @@ Profil.propTypes = {
   location: PropTypes.string.isRequired,
   stats: PropTypes.shape({
     followers: PropTypes.number.isRequired,
-    // followersQuantity: PropTypes.number.isRequired,
+
     views: PropTypes.number.isRequired,
-    // viewsQuantity: PropTypes.number.isRequired,
+
     likes: PropTypes.number.isRequired,
-    // likesQuantity: PropTypes.number.isRequired,
   }),
 };
 
