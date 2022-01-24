@@ -1,28 +1,7 @@
 import Profil from './components/Profil';
 import profil from './profil.json';
-//import { Container } from './components/App.styled';//
-//import './App';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         {/* <img src={logo} className="App-logo" alt="logo" /> */}
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
+import Statistics from './components/Statistics/Statistics';
+import statistics from './statistics.json';
 
 export default function App() {
   return (
@@ -40,6 +19,8 @@ export default function App() {
         //likes={profil.stats.likes}
         //// likesQuantity={profil.stats.likes.quantity}
       />
+
+      <Statistics props={statistics} title="Upload stats" />
     </div>
   );
 }
