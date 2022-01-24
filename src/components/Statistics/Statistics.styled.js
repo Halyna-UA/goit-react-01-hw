@@ -14,7 +14,7 @@ export const Title = styled.h2`
   font-weight: 700;
   line-height: 1.1;
   text-transform: uppercase;
-  color: #212121;
+  color: #2a4018;
   text-align: center;
   margin-top: 0;
   margin-bottom: 10px;
