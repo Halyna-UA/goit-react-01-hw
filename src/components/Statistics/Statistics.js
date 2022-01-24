@@ -1,33 +1,33 @@
 import PropTypes from 'prop-types';
-import { Container, Title } from './Statistics.styled.js';
+import { Container, Title, List, Item, StatisticsData } from './Statistics.styled.js';
 
 function Statistics(props) {
-  const { statistics, title } = props;
+  const { elements, title } = props;
 
   return (
     <Container class="statistics">
-      <Title class="title">{title.length < 0 ? '' : 'Upload stats'}</Title>
+      {title && <Title class="title">{title}</Title>}
 
-      <ul class="stat-list">
-        {props.map(prop => (
-          <li class="item" key={statistics.id}>
-            <span class="label">{statistics.label}</span>
-            <span class="percentage">{statistics.percentage}</span>
-          </li>
+      <List class="stat-list">
+        {elements.map(({ id, label, percentage }) => (
+          <Item class="item" key={id}>
+            <StatisticsData class="label">{label}</StatisticsData>
+            <StatisticsData class="percentage">{percentage} %</StatisticsData>
+          </Item>
         ))}
-      </ul>
+      </List>
     </Container>
   );
 }
 
 Statistics.propTypes = {
-  statistics: PropTypes.arrayOf(
+  elements: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
       percentage: PropTypes.number.isRequired,
     }),
   ).isRequired,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
 };
 export default Statistics;

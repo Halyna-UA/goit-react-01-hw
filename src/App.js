@@ -20,7 +20,7 @@ export default function App() {
         //// likesQuantity={profil.stats.likes.quantity}
       />
 
-      <Statistics props={statistics} title="Upload stats" />
+      <Statistics elements={statistics} title="Upload stats" />
     </div>
   );
 }
