@@ -2,6 +2,8 @@ import Profil from './components/Profil';
 import profil from './profil.json';
 import Statistics from './components/Statistics/Statistics';
 import statistics from './statistics.json';
+import FriendList from './components/FriendList/FriendList';
+import friendList from './friendList.json';
 
 export default function App() {
   return (
@@ -19,8 +21,8 @@ export default function App() {
         //likes={profil.stats.likes}
         //// likesQuantity={profil.stats.likes.quantity}
       />
-
       <Statistics elements={statistics} title="Upload stats" />
+      <FriendList friends={friendList} />
     </div>
   );
 }

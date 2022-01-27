@@ -5,6 +5,7 @@ export const Container = styled.div`
   padding: 50px;
   width: 320px;
   height: auto;
+  margin: 0 auto;
 `;
 export const Wrap = styled.div`
   display: flex;
