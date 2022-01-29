@@ -2,7 +2,7 @@ import React from 'react';
 import { Item, Status, Avatar, Name } from './FriendList.styled.js';
 
 const Friend = ({ avatar, name, status }) => {
-  //   const status = isOnline;
+  // const status = isOnline;
   console.log(status);
   return (
     <>
@@ -10,11 +10,11 @@ const Friend = ({ avatar, name, status }) => {
         <Status class="status" status={status}>
           {status}
         </Status>
-        {/* <span class="status" isOnline={status ? { green } : { red }}></span> */}
         <Avatar class="avatar" src={avatar} alt={name} width="48" />
-        <Name class="name" name={name}></Name>
+        <Name class="name" name={name}>
+          {name}
+        </Name>
       </Item>
-      ;
     </>
   );
 };

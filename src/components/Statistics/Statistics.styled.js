@@ -4,9 +4,8 @@ export const Container = styled.section`
   width: 320px;
   height: auto;
   background-color: #78f542;
-  // text-align: center;
-  // padding-top: 118px;
-  // padding-bottom: 118px;
+  border: 1px solid #f5f10c;
+  border-radius: 15px;
   margin: 0 auto;
 `;
 export const Title = styled.h2`
@@ -26,7 +25,6 @@ export const List = styled.ul`
   align-items: space-betwen;
   justify-content: center;
   box-sizing: border-box;
-  //flex-grow: 50%;
   padding: 0px;
   margin: 0px;
   list-style: none;

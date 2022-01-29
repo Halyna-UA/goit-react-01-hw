@@ -6,6 +6,8 @@ export const Container = styled.div`
   width: 320px;
   height: auto;
   margin: 0 auto;
+  border: 3px solid #f50c2f;
+  border-radius: 15px;
 `;
 export const Wrap = styled.div`
   display: flex;
