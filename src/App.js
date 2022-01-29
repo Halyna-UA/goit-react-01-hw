@@ -4,6 +4,8 @@ import Statistics from './components/Statistics/Statistics';
 import statistics from './statistics.json';
 import FriendList from './components/FriendList/FriendList';
 import friendList from './friendList.json';
+import TransactionHistory from './components/TransactionHistory/TransactionHistory';
+import transaction from './transactionHistory.json';
 
 export default function App() {
   return (
@@ -14,15 +16,10 @@ export default function App() {
         tag={profil.tag}
         location={profil.location}
         stats={profil.stats}
-        //followers={profil.stats.followers}
-        //// followersQuantity={profil.stats.followers.quantity}
-        //views={profil.stats.views}
-        //// viewsQuantity={profil.stats.likes.quantity}
-        //likes={profil.stats.likes}
-        //// likesQuantity={profil.stats.likes.quantity}
       />
       <Statistics elements={statistics} title="Upload stats" />
       <FriendList friends={friendList} />
+      <TransactionHistory items={transaction} />
     </div>
   );
 }

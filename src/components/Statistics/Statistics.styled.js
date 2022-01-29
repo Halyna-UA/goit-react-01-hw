@@ -6,7 +6,7 @@ export const Container = styled.section`
   background-color: #78f542;
   border: 1px solid #f5f10c;
   border-radius: 15px;
-  margin: 0 auto;
+  margin: 20px auto;
 `;
 export const Title = styled.h2`
   font-size: 14px;
