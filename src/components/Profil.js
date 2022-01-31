@@ -1,28 +1,28 @@
 import PropTypes from 'prop-types';
 import { Container, Wrap, Avatar, Info, List, Item, SocialData } from './App.styled';
 
-function Profil(props) {
+function Profil({ avatar, username, tag, location, stats: { followers, views, likes } }) {
   return (
     <Container>
       <Wrap>
-        <Avatar src={props.avatar} alt={props.username} />
-        <Info>{props.username}</Info>
-        <Info>{props.tag}</Info>
-        <Info>{props.location}</Info>
+        <Avatar src={avatar} alt={username} />
+        <Info>{username}</Info>
+        <Info>{tag}</Info>
+        <Info>{location}</Info>
       </Wrap>
 
       <List>
         <Item>
           <SocialData>Followers</SocialData>
-          <SocialData>{props.followers}1000</SocialData>
+          <SocialData>{followers}</SocialData>
         </Item>
         <Item>
           <SocialData>Views</SocialData>
-          <SocialData>{props.views}2000</SocialData>
+          <SocialData>{views}</SocialData>
         </Item>
         <Item>
           <SocialData>Likes</SocialData>
-          <SocialData>{props.likes}3000</SocialData>
+          <SocialData>{likes}</SocialData>
         </Item>
       </List>
     </Container>
