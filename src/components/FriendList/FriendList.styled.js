@@ -23,10 +23,9 @@ export const Status = styled.span`
   height: 20px;
   border: none;
   border-radius: 50px;
-  background-color: ${({ status }) => {
-    return status ? 'green' : 'red';
-  }};
+  background-color: ${({ status }) => (status ? 'green' : 'red')};
 `;
+
 export const Avatar = styled.img`
   width: 100px;
   height: auto;

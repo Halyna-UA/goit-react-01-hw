@@ -3,7 +3,7 @@ import { Item, Status, Avatar, Name } from './FriendList.styled.js';
 
 const Friend = ({ avatar, name, status }) => {
   // const status = isOnline;
-  console.log(status);
+  // console.log(isOnline);
   return (
     <>
       <Item class="item">
